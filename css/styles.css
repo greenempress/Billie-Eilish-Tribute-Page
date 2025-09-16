@@ -106,7 +106,6 @@
   p {
     font-size: 1.1rem;
     font-weight: 400;
-    max-width: 400px;
     margin: 0 auto;
     color: #A5B4C3;
     text-shadow: 0 0 6px #183B56AA;
@@ -126,70 +125,62 @@
   }
 
   .about {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto 4rem auto;
-    text-align: left;
-  }
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-  .about h2 {
-    font-size: 2.5rem;
-    margin: 0 0 1rem 0;
-    color: #C3E4F9;
-    text-shadow: 0 0 8px #256D85AA;
-    text-align: left;
-  }
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #C3E4F9;
+      text-shadow: 0 0 8px #256D85AA;
+    }
 
-  .about-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
+    .about p {
+      font-size: 1.15rem;
+      max-width: 900px;
+      line-height: 1.7;
+      color: #B0C7D9;
+      text-shadow: 0 0 6px #183B56AA;
+    }
 
-  .about-text {
-    flex: 1 1 300px;
-    max-width: 600px;
-    z-index: 1;
-  }
+    .photo-collage {
+      padding: 3rem 1rem;
+    }
 
-  .about-text p {
-    font-size: 1.13rem;
-    line-height: 1.75;
-    color: #B0C7D9;
-    max-width: 500px;
-    margin: 0 auto;
-    text-shadow: 0 0 6px #183B56AA;
-  }
+    .collage {
+      column-count: 6;           /* number of columns on desktop */
+      column-gap: 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-  .about-gallery {
-    flex: 1 1 400px;
-    position: relative;
-    height: 450px;
-    width: 500px;
-  }
+    .collage img {
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      display: block;
+      break-inside: avoid;       /* prevents image break between columns */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease;
+    }
 
-  .about-gallery img {
-    position: absolute;
-    width: 200px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px #256D85AA;
-    transition: transform 0.3s ease;
-    opacity: 0.98;
-    z-index: 1;
-  }
+    .collage img:hover {
+      transform: scale(1.05);
+    }
 
-  .about-gallery img:nth-child(1) { top: 20px; left: 20px; transform: rotate(-5deg); }
-  .about-gallery img:nth-child(2) { top: 10px; left: 150px; transform: rotate(4deg); }
-  .about-gallery img:nth-child(3) { top: 30px; left: 320px; transform: rotate(1deg); }
-  .about-gallery img:nth-child(4) { top: 230px; left: 80px; transform: rotate(6deg); }
-  .about-gallery img:nth-child(5) { top: 240px; left: 220px; transform: rotate(-6deg); }
-
-  .about-gallery img:hover {
-    transform: scale(1.05) rotate(0deg);
-    z-index: 10;
-  }
+    /* --- Responsive breakpoints --- */
+    @media (max-width: 1024px) {
+      .collage { column-count: 3; }
+    }
+    @media (max-width: 768px) {
+      .collage { column-count: 2; }
+    }
+    @media (max-width: 480px) {
+      .collage { column-count: 1; }
+    }
 
   .timeline-section {
   padding: 4rem 2rem;
@@ -324,7 +315,6 @@
 #dear-billie {
     padding: 4rem 2rem;
     text-align: center;
-    font-family: 'Helvetica Neue', sans-serif;
   }
 
   #dear-billie h2 {
