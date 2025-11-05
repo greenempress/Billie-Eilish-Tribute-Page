@@ -25,7 +25,8 @@ It was designed to be simple yet expressive, reflecting her unique aesthetic and
 
   ## Built With
 - **HTML5**  
-- **CSS3 / Flexbox**  
+- **CSS3 / Flexbox**
+- **JavaScript**
 - **Deployed on Vercel**
 
 ---
